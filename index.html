@@ -172,10 +172,10 @@ async function mkShare(){try{await document.fonts.load('700 60px Fredoka')}catch
  g.font='700 100px Fredoka,Poppins,sans-serif';g.fillStyle='#222';g.fillText(S.me+' : '+S.cpu,540,900);
  T(S.win?'Yuk ikut main dan sentil aku! 🤜':'Yuk main, buktikan kamu lebih jago! 🤜',1040,52,'#fff');
  g.fillStyle='#fff';g.beginPath();g.roundRect(190,1090,700,130,30);g.fill();g.stroke();
- g.font='700 72px Fredoka,Poppins,sans-serif';g.fillStyle='#222';g.fillText('da.gd/sentilbattle',540,1178);g.font='500 28px Fredoka,Poppins,sans-serif';g.fillStyle='#fff';g.fillText('© 2026 Bad in English',540,1295);return c}
+ g.font='700 72px Fredoka,Poppins,sans-serif';g.fillStyle='#222';g.fillText('da.gd/badbattle',540,1178);g.font='500 28px Fredoka,Poppins,sans-serif';g.fillStyle='#fff';g.fillText('© 2026 Bad in English',540,1295);return c}
 async function saveImg(){try{const d=typeof claude!=='undefined'&&await claude.use('downloads');if(d){await d.save({filename:'sentil-battle.png',data:shF});return}}catch(e){}
  const a=document.createElement('a');a.href=shU;a.download='sentil-battle.png';document.body.appendChild(a);a.click();a.remove()}
 $('shr').onclick=async()=>{const c=await mkShare();shU=c.toDataURL('image/png');shF=await new Promise(r=>c.toBlob(r,'image/png'));$('pvi').src=shU;$('pv').style.display='flex'};
 $('pvc').onclick=()=>$('pv').style.display='none';$('pz').onclick=()=>{S.pz=true;$('pause').style.display='flex';mus.pause()};$('rsm').onclick=()=>{S.pz=false;$('pause').style.display='none';musPlay()};$('pmenu').onclick=home;$('pvd').onclick=saveImg;
-$('pvs').onclick=async()=>{const f=new File([shF],'sentil-battle.png',{type:'image/png'});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],text:(S.win?'Aku menang di Sentil Battle! Yuk main: da.gd/sentilbattle':'Aku kalah di Sentil Battle, tapi seru! Yuk main dan kalahkan aku: da.gd/sentilbattle')});return}}catch(e){if(e.name==='AbortError')return}saveImg()};
+$('pvs').onclick=async()=>{const f=new File([shF],'sentil-battle.png',{type:'image/png'});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],text:(S.win?'Aku menang di Sentil Battle! Yuk main: da.gd/badbattle':'Aku kalah di Sentil Battle, tapi seru! Yuk main dan kalahkan aku: da.gd/badbattle')});return}}catch(e){if(e.name==='AbortError')return}saveImg()};
 </script></body></html>
